@@ -1,0 +1,111 @@
+execve("./part1", ["./part1"], 0x7ffdb65036e0 /* 51 vars */) = 0
+brk(NULL)                               = 0x186bd000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f135124c000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/lib/glibc-hwcaps/x86-64-v3/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/lib/glibc-hwcaps/x86-64-v2/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/lib/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v3/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v2/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\3403\0\0004\0\0\0"..., 832) = 832
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/usr/lib/", {st_mode=S_IFDIR|0555, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/opt/sfw/lib/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/sfw/lib/glibc-hwcaps/x86-64-v3/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/opt/sfw/lib/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/sfw/lib/glibc-hwcaps/x86-64-v2/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/opt/sfw/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/sfw/lib/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/sfw/lib/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sfw/lib/glibc-hwcaps/x86-64-v3/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/sfw/lib/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sfw/lib/glibc-hwcaps/x86-64-v2/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/sfw/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sfw/lib/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/ccs/lib/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/ccs/lib/glibc-hwcaps/x86-64-v3/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/ccs/lib/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/ccs/lib/glibc-hwcaps/x86-64-v2/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/ccs/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/ccs/lib/", 0x7ffd46432c80, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=94987, ...}) = 0
+mmap(NULL, 94987, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f1351234000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\2408\0\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+fstat(3, {st_mode=S_IFREG|0755, st_size=2482096, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2067312, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f135103b000
+mmap(0x7f13511ad000, 495616, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x172000) = 0x7f13511ad000
+mmap(0x7f1351226000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1eb000) = 0x7f1351226000
+mmap(0x7f135122c000, 31600, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f135122c000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1351038000
+arch_prctl(ARCH_SET_FS, 0x7f1351038740) = 0
+set_tid_address(0x7f1351038d68)         = 1952902
+set_robust_list(0x7f1351038a20, 24)     = 0
+rseq({cpu_id_start=0, cpu_id=RSEQ_CPU_ID_UNINITIALIZED, rseq_cs=NULL, flags=0, node_id=0, mm_cid=0, slice_ctrl={request=0, granted=0, __reserved=0}, __reserved=0}, 33, 0, 0x53053053) = 0
+mprotect(0x7f1351226000, 16384, PROT_READ) = 0
+mprotect(0x402000, 4096, PROT_READ)     = 0
+mprotect(0x7f135128d000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+getrandom("\x12\x96\xc4\x0c\xc3\x62\x9b\xeb", 8, GRND_NONBLOCK) = 8
+munmap(0x7f1351234000, 94987)           = 0
+brk(NULL)                               = 0x186bd000
+brk(0x186de000)                         = 0x186de000
+openat(AT_FDCWD, "/etc/ttys", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+ioctl(0, TCGETS2, {c_iflag=ICRNL|IXON, c_oflag=NL0|CR0|XTABS|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+fstat(0, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x1), ...}) = 0
+readlink("/proc/self/fd/0", "/dev/pts/1", 32) = 10
+newfstatat(AT_FDCWD, "/dev/pts/1", {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x1), ...}, 0) = 0
+openat(AT_FDCWD, "/etc/ttys", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+getuid()                                = 54946
+openat(AT_FDCWD, "/proc/self/loginuid", O_RDONLY) = 3
+read(3, "54946", 12)                    = 5
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=691, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0555, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=691, ...}) = 0
+read(3, "# Generated by authselect\n# Do n"..., 4096) = 691
+read(3, "", 4096)                       = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=691, ...}) = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=2853, ...}) = 0
+lseek(3, 0, SEEK_SET)                   = 0
+read(3, "root:x:0:0:Super User:/root:/bin"..., 4096) = 2853
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/lib/libnss_sss.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libnss_sss.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=94987, ...}) = 0
+mmap(NULL, 94987, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f1351234000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib64/libnss_sss.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=53528, ...}) = 0
+mmap(NULL, 53864, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f135102a000
+mmap(0x7f1351033000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x7f1351033000
+mmap(0x7f1351036000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb000) = 0x7f1351036000
+close(3)                                = 0
+mprotect(0x7f1351036000, 4096, PROT_READ) = 0
+munmap(0x7f1351234000, 94987)           = 0
+openat(AT_FDCWD, "/var/lib/sss/mc/passwd", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=9253600, ...}) = 0
+mmap(NULL, 9253600, PROT_READ, MAP_SHARED, 3, 0) = 0x7f1350600000
+fstat(3, {st_mode=S_IFREG|0664, st_size=9253600, ...}) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1351038a10) = 1952903
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
