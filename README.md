@@ -1,20 +1,20 @@
 # Elevator
 
-[Description]
+COP4610 Project 2
 
 ## Group Members
-- **John Doe**: jd19@fsu.edu
-- **Jane Smith**: js19@fsu.edu
-- **Alex Brown**: ab19@fsu.edu
+- **Kian Sweeney**: kms24b@fsu.edu
+- **Liam Tingley**: lt22m@fsu.edu
+- **Maxwell Hackner**: msh24@fsu.edu
 ## Division of Labor
 
 ### Part 1: System Call Tracing
-- **Responsibilities**: [Description]
-- **Assigned to**: John Doe
+- **Responsibilities**: Compare System calls of a empty program, to a non empty program.
+- **Assigned to**: Kian Sweeney 
 
 ### Part 2: Timer Kernel Module
-- **Responsibilities**: [Description]
-- **Assigned to**: Jane Smith
+- **Responsibilities**: Write a kernel module that displays time information when you read a proc file
+- **Assigned to**: Kian Sweeney
 
 ### Part 3a: Adding System Calls
 - **Responsibilities**: [Description]
@@ -70,17 +70,7 @@ elevator/
 
 ## Part 1
 
-### Compilation
-For a C/C++ example:
-```bash
-make
-```
-This will build the executable in ...
-### Execution
-```bash
-make run
-```
-This will run the program ...
+Inspect and compare the files empty.c empty.trace part1.c part1.trace
 
 ## Part 2
 
@@ -89,12 +79,12 @@ For a C/C++ example:
 ```bash
 make
 ```
-This will build the executable in ...
+This will build kernel module file ...
 ### Execution
 ```bash
-make run
+sudo insmod my_timer.ko
 ```
-This will run the program ...
+This will install the module
 
 
 ## Part 3
@@ -114,13 +104,13 @@ This will run the program ...
 ## Development Log
 Each member records their contributions here.
 
-### [Member 1]
+### Kian Sweeney
 
 | Date       | Work Completed / Notes |
 |------------|------------------------|
-| YYYY-MM-DD | [Description of task]  |
-| YYYY-MM-DD | [Description of task]  |
-| YYYY-MM-DD | [Description of task]  |
+| 2026-10-01 | Completed part 1       |
+| 2026-10-21 | Completed part 2       |
+
 
 ### [Member 2]
 
@@ -152,8 +142,4 @@ Document in-person meetings, their purpose, and what was discussed.
 
 
 ## Bugs
-- **Bug 1**: This is bug 1.
-- **Bug 2**: This is bug 2.
-- **Bug 3**: This is bug 3.
-
-## Considerations
+- There are no known bugs at the moment.
