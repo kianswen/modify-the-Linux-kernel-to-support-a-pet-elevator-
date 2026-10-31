@@ -17,16 +17,16 @@ COP4610 Project 2
 - **Assigned to**: Kian Sweeney
 
 ### Part 3a: Adding System Calls
-- **Responsibilities**: [Description]
-- **Assigned to**: Alex Brown
+- **Responsibilities**: Add start_elevator, issue_request, and stop_elevator system calls (548-550) to the kernel
+- **Assigned to**: Maxwell Hackner
 
 ### Part 3b: Kernel Compilation
-- **Responsibilities**: [Description]
-- **Assigned to**: Alex Brown, Jane Smith
+- **Responsibilities**: Compile and install linux-6.16.x with the new system calls
+- **Assigned to**: Maxwell Hackner
 
 ### Part 3c: Threads
-- **Responsibilities**: [Description]
-- **Assigned to**: Alex Brown, Jane Smith
+- **Responsibilities**: Elevator module that runs the elevator in a kthread and hooks into the system calls
+- **Assigned to**: Maxwell Hackner
 
 ### Part 3d: Linked List
 - **Responsibilities**: [Description]
@@ -57,6 +57,7 @@ elevator/
 │   ├── src/
 │   ├── tests/
 │   ├── Makefile
+│   ├── build_kernel.py
 │   └── sys_call.c
 ├── Makefile
 └── README.md
@@ -89,17 +90,49 @@ This will install the module
 
 ## Part 3
 
-### Compilation
-For a C/C++ example:
+### Adding System Calls & Kernel Compilation
 ```bash
+sudo ln -s /usr/src/linux-6.16.x ~/linux-6.16.x
+sudo python3 part3/build_kernel.py ~/linux-6.16.x --build
+sudo reboot
+uname -r
+```
+`build_kernel.py` does the following (safe to rerun, it skips anything already done):
+- copies `part3/syscalls.c` into `[kernel]/syscalls/` and writes `syscalls/Makefile`
+- adds syscalls 548-550 to `arch/x86/entry/syscalls/syscall_64.tbl`
+- adds the syscall prototypes to `include/linux/syscalls.h`
+- adds `syscalls/` to the `core-y` line in the top level kernel `Makefile`
+- with `--build`: disables the trusted/revocation keys, then runs `make`,
+  `make modules_install`, and `make install`
+
+Leave off `--build` to only do the file edits. To tweak the config, run `make menuconfig`
+in the kernel directory before using `--build`.
+
+### Testing System Calls
+```bash
+cd part3/tests/system-calls-test
+make
+sudo insmod syscheck.ko
+make run
+sudo rmmod syscheck
+```
+
+### Compilation
+```bash
+cd part3
 make
 ```
-This will build the executable in ...
+This will build the kernel module `elevator.ko` in `part3/`.
 ### Execution
 ```bash
-make run
+sudo insmod elevator.ko
+cd tests/elevator-test
+make
+./consumer --start
+./producer [number_of_pets]
+./consumer --stop
+sudo rmmod elevator
 ```
-This will run the program ...
 
 ## Development Log
 Each member records their contributions here.
@@ -112,13 +145,11 @@ Each member records their contributions here.
 | 2026-10-21 | Completed part 2       |
 
 
-### [Member 2]
+### Maxwell Hackner
 
 | Date       | Work Completed / Notes |
 |------------|------------------------|
-| YYYY-MM-DD | [Description of task]  |
-| YYYY-MM-DD | [Description of task]  |
-| YYYY-MM-DD | [Description of task]  |
+| 2026-10-29 | Added system calls, kernel compilation steps, and elevator kthread |
 
 
 ### [Member 3]
