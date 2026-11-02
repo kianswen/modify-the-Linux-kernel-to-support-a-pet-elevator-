@@ -29,16 +29,16 @@ COP4610 Project 2
 - **Assigned to**: Maxwell Hackner
 
 ### Part 3d: Linked List
-- **Responsibilities**: [Description]
-- **Assigned to**: Jane Smith
+- **Responsibilities**: Store pets in kernel linked lists (`linux/list.h`): one waiting list per floor and one list for pets riding the elevator. Pets are allocated with `kmalloc` in `issue_request` and freed when delivered or when the module is removed.
+- **Assigned to**: Liam Tingley
 
 ### Part 3e: Mutexes
-- **Responsibilities**: [Description]
-- **Assigned to**: John Doe
+- **Responsibilities**: Protect all shared elevator data (floor lists, rider list, state, counters) with one mutex, taken by the system calls, the elevator kthread, and the `/proc/elevator` reader.
+- **Assigned to**: Liam Tingley
 
 ### Part 3f: Scheduling Algorithm
-- **Responsibilities**: [Description]
-- **Assigned to**: Alex Brown, John Doe
+- **Responsibilities**: Elevator movement and loading logic in the kthread (FIFO boarding, 5 pet / 50 lb limit, 2s per floor, 1s per load/unload, stop only after all riders are delivered) and the `/proc/elevator` output.
+- **Assigned to**: Liam Tingley
 
 ## File Listing
 ```
@@ -55,10 +55,11 @@ elevator/
 │   └── Makefile
 ├── part3/
 │   ├── src/
+│   │   └── elevator.c
 │   ├── tests/
 │   ├── Makefile
 │   ├── build_kernel.py
-│   └── sys_call.c
+│   └── syscalls.c
 ├── Makefile
 └── README.md
 
@@ -99,7 +100,8 @@ uname -r
 ```
 `build_kernel.py` does the following (safe to rerun, it skips anything already done):
 - copies `part3/syscalls.c` into `[kernel]/syscalls/` and writes `syscalls/Makefile`
-- adds syscalls 548-550 to `arch/x86/entry/syscalls/syscall_64.tbl`
+- adds syscalls 548-550 to the syscall table (`arch/x86/entry/syscalls/syscall_64.tbl` on x86,
+  `arch/arm64/tools/syscall_64.tbl` on an ARM64 machine)
 - adds the syscall prototypes to `include/linux/syscalls.h`
 - adds `syscalls/` to the `core-y` line in the top level kernel `Makefile`
 - with `--build`: disables the trusted/revocation keys, then runs `make`,
@@ -152,13 +154,12 @@ Each member records their contributions here.
 | 2026-10-29 | Added system calls, kernel compilation steps, and elevator kthread |
 
 
-### [Member 3]
+### Liam Tingley
 
 | Date       | Work Completed / Notes |
 |------------|------------------------|
-| YYYY-MM-DD | [Description of task]  |
-| YYYY-MM-DD | [Description of task]  |
-| YYYY-MM-DD | [Description of task]  |
+| 2026-11-02 | Wrote parts 3d-3f in `part3/src/elevator.c`: pet linked lists with `kmalloc`, mutex locking, elevator scheduling in the kthread, and the `/proc/elevator` output |
+| 2026-11-02 | Set up an ARM64 Ubuntu 24.04 VM and built linux-6.16.12 with the new system calls to test the module |
 
 
 ## Meetings
