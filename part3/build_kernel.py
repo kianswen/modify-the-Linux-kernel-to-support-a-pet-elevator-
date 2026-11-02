@@ -39,8 +39,15 @@ def copy_syscalls(kdir):
     print("copied syscalls.c and wrote syscalls/Makefile")
 
 
+def table_path(kdir):
+    # x86 keeps its syscall table in arch/x86, arm64 (ex: Apple Silicon VMs) in arch/arm64
+    if os.uname().machine in ("aarch64", "arm64"):
+        return os.path.join(kdir, "arch/arm64/tools/syscall_64.tbl")
+    return os.path.join(kdir, "arch/x86/entry/syscalls/syscall_64.tbl")
+
+
 def add_table_entries(kdir):
-    path = os.path.join(kdir, "arch/x86/entry/syscalls/syscall_64.tbl")
+    path = table_path(kdir)
     text = read(path)
     if "sys_start_elevator" in text:
         print("syscall_64.tbl already done")
@@ -106,7 +113,7 @@ def main():
     args = parser.parse_args()
 
     kdir = os.path.abspath(os.path.expanduser(args.kernel_dir))
-    tbl = os.path.join(kdir, "arch/x86/entry/syscalls/syscall_64.tbl")
+    tbl = table_path(kdir)
     if not os.path.isfile(os.path.join(kdir, "Makefile")) or not os.path.isfile(tbl):
         sys.exit("error: " + kdir + " doesnt look like a kernel source tree")
 
