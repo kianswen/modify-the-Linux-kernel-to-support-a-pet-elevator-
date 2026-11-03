@@ -165,11 +165,11 @@ Each member records their contributions here.
 ## Meetings
 Document in-person meetings, their purpose, and what was discussed.
 
-| Date       | Attendees            | Topics Discussed | Outcomes / Decisions |
-|------------|----------------------|------------------|-----------------------|
-| YYYY-MM-DD | [Names]              | [Agenda items]   | [Actions/Next steps]  |
-| YYYY-MM-DD | [Names]              | [Agenda items]   | [Actions/Next steps]  |
-| YYYY-MM-DD | [Names]              | [Agenda items]   | [Actions/Next steps]  |
+| Date       | Attendees            | Topics Discussed    | Outcomes / Decisions       |
+|------------|----------------------|---------------------|----------------------------|
+| 2026-10-15 | Kian, Max, Liam      | Division of labor   | Beginning working          |
+| 2026-10-26 | Kian, Max, Liam      | Setting up GitHub   | Submitting files to GitHub |
+| 2026-11-02 | Kian, Max, Liam      | Submission checking | Project Submission         |
 
 
 
